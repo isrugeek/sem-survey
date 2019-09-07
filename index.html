@@ -225,6 +225,7 @@
             $('.rsform-block-submit').addClass('show');
             $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
             $(document.createElement('h4')).addClass('score').text(Math.round(score / quiz.length * 100) + '%').insertAfter('#question');
+            
         }
 
         /**
@@ -291,6 +292,7 @@
     function copyText() {
         var output = document.getElementById("frame").innerHTML;
         document.getElementById("placecontent").value = output;
+
     }
 
 </script>
@@ -523,8 +525,13 @@
         </div>
     
         <div class="col-sm-6 formControls rsform-block-submit">
-            <button type="submit" name="form[submit]" id="submit" onclick="copyText()"
+            <!-- <button type="submit" name="form[submit]" id="submit" onclick="copyText()" -->
+                <button type="submit" name="form[submit]" id="submit"
+                    onclick="window.location.href='https://forms.gle/6taX23pJp4t9VcsR8' "
+            
                 class="rsform-submit-button  btn btn-primary">Submit Quiz</button>
+                
+
         </div>
     </body>
     
